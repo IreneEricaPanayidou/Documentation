@@ -14,7 +14,7 @@ Permissions example:`-rw-r--r-- 1 root root 1031 Nov 18 09:22 /etc/passwd`
 
 ``![](<.gitbook/assets/image (4).png>)``
 
-The first ten characters show the access permissions. The first dash (-) indicates the type of file (d for directory, s for special file, and - for a regular file). The next three characters (rw-) define the owner’s permission to the file. In this example, the file owner has read and write permissions only. The next three characters (r--) are the permissions for the members of the same group as the file owner (which in this example is read only). The last three characters (r--) show the permissions for all other users and in this example it is read only. Some permissions may begin with d or l signifying that those permissions are for a directory or a link.
+The first three characters are for the user, the next three are for the group, and the last three are for others. The first ten characters show the access permissions. The first dash (-) indicates the type of file (d for directory, s for special file, and - for a regular file). The next three characters (rw-) define the owner’s permission to the file. In this example, the file owner has read and write permissions only. The next three characters (r--) are the permissions for the members of the same group as the file owner (which in this example is read only). The last three characters (r--) show the permissions for all other users and in this example it is read only. Some permissions may begin with d or l signifying that those permissions are for a directory or a link.
 
 ![](<.gitbook/assets/image (3).png>)
 
@@ -72,7 +72,8 @@ When whitelisting individual commands using the above syntax, it is important to
 * View files and permisions: ls -l
 * View files including hidden: ls -a
 * View files including hidden and permissions: ls -al
-*
+* Change user: `su - <userName>`
+* Create file: `touch <fileName>`
 
 </details>
 
