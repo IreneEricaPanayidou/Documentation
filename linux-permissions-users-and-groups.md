@@ -24,6 +24,15 @@ The first column with the ten letters and dashes shows the permissions of the fi
 
 Alternatively, numbers can be used to grant permissions as well
 
+​![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F8HdAqUUy3RShZPGhf9ej%2Fuploads%2FiJulL3u4brXqueNiir1x%2Fimage.png?alt=media\&token=95e6bd50-34ca-4518-8d8a-eaf52ad7749c)​
+
+So, for example:
+
+* 777 is the same as rwxrwxrwx
+* 755 is the same as rwxr-xr-x
+* 666 is the same as rw-rw-rw-
+* 744 is the same as rwxr--r--
+
 ![](<.gitbook/assets/image (4).png>)
 
 </details>
