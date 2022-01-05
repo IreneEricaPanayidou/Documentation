@@ -16,14 +16,9 @@ Permissions example:`-rw-r--r-- 1 root root 1031 Nov 18 09:22 /etc/passwd`
 
 The first ten characters show the access permissions. The first dash (-) indicates the type of file (d for directory, s for special file, and - for a regular file). The next three characters (rw-) define the owner’s permission to the file. In this example, the file owner has read and write permissions only. The next three characters (r--) are the permissions for the members of the same group as the file owner (which in this example is read only). The last three characters (r--) show the permissions for all other users and in this example it is read only. Some permissions may begin with d or l signifying that those permissions are for a directory or a link.
 
-![](<.gitbook/assets/image (2).png>)
+![](<.gitbook/assets/image (3).png>)
 
-So, for example:
-
-* 777 is the same as rwxrwxrwx
-* 755 is the same as rwxr-xr-x
-* 666 is the same as rw-rw-rw-
-* 744 is the same as rwxr--r--
+The first column with the ten letters and dashes shows the permissions of the file or directory. The second column (with the single number) indicates the number of files or directories contained in the directory. The next column indicates the owner, followed by the group name, the size, date, and time of last access, and finally the name of the file.
 
 </details>
 
@@ -61,14 +56,35 @@ When whitelisting individual commands using the above syntax, it is important to
 * View Permissions: `ls -l <fileName/DirectoryName>`
 * Find a user’s primary group information: `id <userName>` . If you want a less verbose output that only shows the primary group name: `id -gn <userName>`
 * Find the groups of a user: `groups <userName>`
+* Create a new group: `groupadd <groupName>`
+* `Delete a group: groupdel <groupName>`
+* Switch groups: `newgrp <groupName>`
 * Add a user to group/s: `sudo usermod -a -G <groupName> <userName>` . The -a and -G options ensure that the user is not removed from any group that the user already belongs to.
 * Create a new standard user: `useradd <userName>`. Use the -e flag to set the date when the account expires: `useradd <userName>** -e <YYYY-MM-DD>`.
 * Set a password for a user: `passwd <userName>`
 * Remove a user account: `userdel <userName>`
 * Remove the user, their home folder, and their files: `userdel -r <userName>`
+* Create a directory: `mkdir <directoryName>`
+* Create a directory and set permissions: `mkdir -m a=rwx <directoryName>`
+* Create a nested directory: `mkdir -p <directoryName/directoryName1>`. The -p flag creats a directory whether the first specified has been created or not.
+* Remove a file: `rm <fileName>`
+* Remove a directory: `rm -r <directoryName`>
+* View files and permisions: ls -l
+* View files including hidden: ls -a
+* View files including hidden and permissions: ls -al
+*
 
 </details>
 
-mkdir -p \<directoryName/directoryName>(the -p flag creates a directory whether the first directory specified was created or not).
+
+
+![](<.gitbook/assets/image (2).png>)
+
+So, for example:
+
+* 777 is the same as rwxrwxrwx
+* 755 is the same as rwxr-xr-x
+* 666 is the same as rw-rw-rw-
+* 744 is the same as rwxr--r--
 
 Create a softlink(symlink) ln -sf \<source> \<linkName>
