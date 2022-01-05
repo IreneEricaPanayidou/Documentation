@@ -1,4 +1,4 @@
-# Linux Permissions, Users and Groups
+# Linux
 
 <details>
 
@@ -34,6 +34,14 @@ So, for example:
 * 744 is the same as rwxr--r--
 
 ![](<.gitbook/assets/image (4).png>)
+
+</details>
+
+<details>
+
+<summary>Ownership</summary>
+
+Chown command lets you change the file owner and group through the command line.
 
 </details>
 
@@ -89,6 +97,12 @@ When whitelisting individual commands using the above syntax, it is important to
 * View files including hidden and permissions: ls -al
 * Change user: `su - <userName>`
 * Create file: `touch <fileName>`
+* Change the owner of a file: `chown <newOwner> <fileName>`
+* &#x20;Change the group of a file: `chown :<groupName> <file-name>`
+* Change both the owner and the group of a file: `chown <newOwner>:<newGroup> <fileName>`.  Alternatively the userId and groupId can be used instead. `e.g chown 1000:1001 test1`
+* Change ownership on directory: `chown -R <newOwner>:<newGroup> <directory-name-or-path>`
+* Change ownership after checking existing owner and/or group: `chown --from=[curr-own]:[curr-group] [new-owner]:[new-group] [filename]`
+* Change ownership verbose: chown `<newOwner>:<newGroup> <fileName> -v`
 
 </details>
 
