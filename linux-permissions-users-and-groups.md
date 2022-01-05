@@ -24,6 +24,8 @@ The first column with the ten letters and dashes shows the permissions of the fi
 
 Alternatively, numbers can be used to grant permissions as well
 
+![](<.gitbook/assets/image (4).png>)
+
 </details>
 
 <details>
