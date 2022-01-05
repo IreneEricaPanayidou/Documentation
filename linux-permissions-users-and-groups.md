@@ -1,3 +1,7 @@
+---
+description: Permissions, Users and Groups
+---
+
 # Linux
 
 <details>
@@ -105,7 +109,5 @@ When whitelisting individual commands using the above syntax, it is important to
 * Change ownership verbose: chown `<newOwner>:<newGroup> <fileName> -v`
 
 </details>
-
-
 
 Create a softlink(symlink) ln -sf \<source> \<linkName>
