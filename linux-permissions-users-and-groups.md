@@ -41,6 +41,17 @@ A user’s primary group (default group) is usually the group that is recorded i
 
 In order to provide a user with the sudo ability, they need to be added to a sudo enabled group, or their username needs to be added to the sudoers file with a set of permissions. This file is sensitive and important as an access and security control, and should not be edited directly with a text editor.
 
+```
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+sudousername   ALL=(ALL:ALL) ALL
+username ALL=/usr/bin/top, /usr/bin/apt-get
+# Allow members of group sudo to execute the less, ls, and apt commands
+%sudo ALL=/usr/bin/less, /usr/bin/ls, /usr/bin/apt
+```
+
+When whitelisting individual commands using the above syntax, it is important to use the absolute path to the command. The `which` command can be used to find this absolute path: `which command-name`
+
 </details>
 
 <details>
