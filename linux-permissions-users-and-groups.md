@@ -10,6 +10,8 @@ Permissions are the “rights” to act on a file or directory. The basic rights
 
 Permissions example:`-rw-r--r-- 1 root root 1031 Nov 18 09:22 /etc/passwd`
 
+``![](<.gitbook/assets/image (4).png>)``
+
 > The first ten characters show the access permissions. The first dash (-) indicates the type of file (d for directory, s for special file, and - for a regular file). The next three characters (rw-) define the owner’s permission to the file. In this example, the file owner has read and write permissions only. The next three characters (r--) are the permissions for the members of the same group as the file owner (which in this example is read only). The last three characters (r--) show the permissions for all other users and in this example it is read only. Some permissions may begin with d or l signifying that those permissions are for a directory or a link.
 
 **Groups**:A user’s primary group (default group) is usually the group that is recorded in your Linux system’s /etc/passwd file. Linux system users can have a maximum of 15 secondary groups. A Linux system’s groups are stored in the /etc/group file.
