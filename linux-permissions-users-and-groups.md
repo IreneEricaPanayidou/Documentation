@@ -10,15 +10,19 @@ Permissions are the “rights” to act on a file or directory. The basic rights
 * **Write:** a write permission on a file allows you to modify the contents of that file. For a directory, the write permission allows you to edit the contents of a directory (e.g. add/delete files).
 * **Execute:** for a file, the executable permission allows you to run the file and execute a program or script. For a directory, the execute permission allows you to change to a different directory and make it your current working directory. Users usually have a default group, but they may belong to several additional groups.
 
-Permissions example:`-rw-r--r-- 1 root root 1031 Nov 18 09:22 /etc/passwd`
+![](<.gitbook/assets/image (3).png>)
 
-``![](<.gitbook/assets/image (4).png>)``
+Permissions example:`-rw-r--r-- 1 root root 1031 Nov 18 09:22 /etc/passwd`
 
 The first three characters are for the user, the next three are for the group, and the last three are for others. The first ten characters show the access permissions. The first dash (-) indicates the type of file (d for directory, s for special file, and - for a regular file). The next three characters (rw-) define the owner’s permission to the file. In this example, the file owner has read and write permissions only. The next three characters (r--) are the permissions for the members of the same group as the file owner (which in this example is read only). The last three characters (r--) show the permissions for all other users and in this example it is read only. Some permissions may begin with d or l signifying that those permissions are for a directory or a link.
 
-![](<.gitbook/assets/image (3).png>)
+![](<.gitbook/assets/image (3) (1).png>)
 
 The first column with the ten letters and dashes shows the permissions of the file or directory. The second column (with the single number) indicates the number of files or directories contained in the directory. The next column indicates the owner, followed by the group name, the size, date, and time of last access, and finally the name of the file.
+
+
+
+Alternatively, numbers can be used to grant permissions as well
 
 </details>
 
@@ -78,14 +82,5 @@ When whitelisting individual commands using the above syntax, it is important to
 </details>
 
 
-
-![](<.gitbook/assets/image (2).png>)
-
-So, for example:
-
-* 777 is the same as rwxrwxrwx
-* 755 is the same as rwxr-xr-x
-* 666 is the same as rw-rw-rw-
-* 744 is the same as rwxr--r--
 
 Create a softlink(symlink) ln -sf \<source> \<linkName>
