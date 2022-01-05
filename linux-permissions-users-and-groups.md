@@ -107,6 +107,9 @@ When whitelisting individual commands using the above syntax, it is important to
 * Change ownership on directory: `chown -R <newOwner>:<newGroup> <directory-name-or-path>`
 * Change ownership after checking existing owner and/or group: `chown --from=[curr-own]:[curr-group] [new-owner]:[new-group] [filename]`
 * Change ownership verbose: chown `<newOwner>:<newGroup> <fileName> -v`
+* List all members of a group: `getent group developers`
+* List all groups: `less /etc/group`
+* List all users: `less /etc/passwd`
 
 </details>
 
