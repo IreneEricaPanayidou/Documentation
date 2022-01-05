@@ -1,6 +1,8 @@
 # Linux Permissions, Users and Groups
 
-#### Read, Write & Execute Permissions <a href="#read-write-and-execute-permissions" id="read-write-and-execute-permissions"></a>
+<details>
+
+<summary>Read, Write &#x26; Execute Permissions</summary>
 
 Permissions are the “rights” to act on a file or directory. The basic rights are read, write, and execute.
 
@@ -14,13 +16,36 @@ Permissions example:`-rw-r--r-- 1 root root 1031 Nov 18 09:22 /etc/passwd`
 
 The first ten characters show the access permissions. The first dash (-) indicates the type of file (d for directory, s for special file, and - for a regular file). The next three characters (rw-) define the owner’s permission to the file. In this example, the file owner has read and write permissions only. The next three characters (r--) are the permissions for the members of the same group as the file owner (which in this example is read only). The last three characters (r--) show the permissions for all other users and in this example it is read only. Some permissions may begin with d or l signifying that those permissions are for a directory or a link.
 
-**Groups**:A user’s primary group (default group) is usually the group that is recorded in your Linux system’s /etc/passwd file. Linux system users can have a maximum of 15 secondary groups. A Linux system’s groups are stored in the /etc/group file.
+![](<.gitbook/assets/image (2).png>)
 
-**Sudo users:**
+So, for example:
+
+* 777 is the same as rwxrwxrwx
+* 755 is the same as rwxr-xr-x
+* 666 is the same as rw-rw-rw-
+* 744 is the same as rwxr--r--
+
+</details>
+
+<details>
+
+<summary>Groups</summary>
+
+A user’s primary group (default group) is usually the group that is recorded in your Linux system’s /etc/passwd file. Linux system users can have a maximum of 15 secondary groups. A Linux system’s groups are stored in the /etc/group file.
+
+</details>
+
+<details>
+
+<summary>Sudo Users</summary>
 
 In order to provide a user with the sudo ability, they need to be added to a sudo enabled group, or their username needs to be added to the sudoers file with a set of permissions. This file is sensitive and important as an access and security control, and should not be edited directly with a text editor.
 
-**Commands:**
+</details>
+
+<details>
+
+<summary><strong>Commands</strong></summary>
 
 * View Permissions: `ls -l <fileName/DirectoryName>`
 * Find a user’s primary group information: `id <userName>` . If you want a less verbose output that only shows the primary group name: `id -gn <userName>`
@@ -30,7 +55,8 @@ In order to provide a user with the sudo ability, they need to be added to a sud
 * Set a password for a user: `passwd <userName>`
 * Remove a user account: `userdel <userName>`
 * Remove the user, their home folder, and their files: `userdel -r <userName>`
-* ``
+
+</details>
 
 mkdir -p \<directoryName/directoryName>(the -p flag creates a directory whether the first directory specified was created or not).
 
