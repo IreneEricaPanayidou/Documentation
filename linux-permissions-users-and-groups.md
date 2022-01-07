@@ -103,6 +103,36 @@ When whitelisting individual commands using the above syntax, it is important to
 
 <details>
 
+<summary>Find</summary>
+
+**find command** can be used in a variety of conditions like you can find files by **permissions**, **users**, **groups**, **file types**, **date**, **size**, and other possible criteria.
+
+#### Commands:
+
+* Find files in directory based on name: `find /<directoryName> -name <fileName>`
+* Find files by name, ignoring case: `find / -type d -name <directoryName>`. Type can be directory (d), file (f) etc.
+* Find all files of specific extension:  `find / -type f -name "*.<extension>"`
+* Find files based on permission: `find / -type f -perm <permission> -print`
+* Find files not matching a permission: `find / -type f ! -perm <permission>`
+* Find read-only files: `find / -perm /u=r`
+* Find executable files: `find / -perm /a=x`
+* Find directory and give permissions: `find / -type d -perm <permission> -print -exec chmod <permission> {} \ ;`
+* Find file and remove: `find . -type f -name "<fileName>" -exec rm -f {} ;`
+* Find all empty files: `find / -type f -empty`
+* Find all hidden files: `find / -type f -name ".*`"
+* Find all files based on a user: `find / -user <userName>`
+* Find all files based on a group: `find / -group <groupName>`
+* Find files modified in the last N days: `find / -mtime <numberOfDays(N)>`
+* Find files accessed in the last N days: `find / -atime <numberOfDays>`
+* Find files modified in between a set of days: `find / -mtime +<minDay>  –mtime  -<maxDay>`
+* Find changed files in the last hour: `find / -cmin -60`. Use -mmin for modified files and -amin for accessed files.
+* Find files of a specific size: `find / -size <size e.g 100MB>`
+* Find files in home directory: `find ~ -name '*<extension>'`
+
+</details>
+
+<details>
+
 <summary><strong>General Commands</strong></summary>
 
 * Create a new standard user: `useradd <userName>`. Use the -e flag to set the date when the account expires: `useradd <userName>** -e <YYYY-MM-DD>`.
