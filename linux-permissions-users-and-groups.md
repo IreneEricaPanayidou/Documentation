@@ -79,6 +79,7 @@ A user’s primary group (default group) is usually the group that is recorded i
 * Delete a group: `groupdel <groupName>`
 * Switch groups: `newgrp <groupName>`
 * Add a user to group/s: `sudo usermod -a -G <groupName> <userName>` . The -a and -G options ensure that the user is not removed from any group that the user already belongs to.
+* Modify a group's name: groupmod -n \<new\_modified\_group\_name> \<old\_group\_name>
 
 </details>
 
@@ -150,6 +151,7 @@ When whitelisting individual commands using the above syntax, it is important to
 * Change user: `su - <userName>`
 * Create file: `touch <fileName>`
 * List all users: `less /etc/passwd`
+* Modify a user: `usermod <flags and options>`
 
 </details>
 
