@@ -129,6 +129,7 @@ When whitelisting individual commands using the above syntax, it is important to
 * Find changed files in the last hour: `find / -cmin -60`. Use -mmin for modified files and -amin for accessed files.
 * Find files of a specific size: `find / -size <size e.g 100MB>`
 * Find files in home directory: `find ~ -name '*<extension>'`
+* Find based on pattern: `find . -regextype posix-egrep -regex ".*.<regex>$"`
 
 </details>
 
