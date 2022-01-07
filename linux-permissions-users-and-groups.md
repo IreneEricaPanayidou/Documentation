@@ -39,6 +39,11 @@ So, for example:
 
 ![](<.gitbook/assets/image (4).png>)
 
+#### Commands:
+
+* View Permissions: `ls -l <fileName/DirectoryName>`
+* Change permissions: `chmod +/- <permissions> <filename and/or directory>`
+
 </details>
 
 <details>
@@ -47,6 +52,15 @@ So, for example:
 
 Chown command lets you change the file owner and group through the command line.
 
+#### Commands:
+
+* Change the owner of a file: `chown <newOwner> <fileName>`
+* &#x20;Change the group of a file: `chown :<groupName> <file-name>`
+* Change both the owner and the group of a file: `chown <newOwner>:<newGroup> <fileName>`.  Alternatively the userId and groupId can be used instead. `e.g chown 1000:1001 test1`
+* Change ownership on directory: `chown -R <newOwner>:<newGroup> <directory-name-or-path>`
+* Change ownership after checking existing owner and/or group: `chown --from=[curr-own]:[curr-group] [new-owner]:[new-group] [filename]`
+* Change ownership verbose: chown `<newOwner>:<newGroup> <fileName> -v`
+
 </details>
 
 <details>
@@ -54,6 +68,17 @@ Chown command lets you change the file owner and group through the command line.
 <summary>Groups</summary>
 
 A user’s primary group (default group) is usually the group that is recorded in your Linux system’s /etc/passwd file. Linux system users can have a maximum of 15 secondary groups. A Linux system’s groups are stored in the /etc/group file.
+
+#### Commands:
+
+* List all members of a group: `getent group developers`
+* List all groups: `less /etc/group`
+* Find a user’s primary group information: `id <userName>` . If you want a less verbose output that only shows the primary group name: `id -gn <userName>`
+* Find the groups of a user: `groups <userName>`
+* Create a new group: `groupadd <groupName>`
+* Delete a group: `groupdel <groupName>`
+* Switch groups: `newgrp <groupName>`
+* Add a user to group/s: `sudo usermod -a -G <groupName> <userName>` . The -a and -G options ensure that the user is not removed from any group that the user already belongs to.
 
 </details>
 
@@ -78,15 +103,8 @@ When whitelisting individual commands using the above syntax, it is important to
 
 <details>
 
-<summary><strong>Commands</strong></summary>
+<summary><strong>General Commands</strong></summary>
 
-* View Permissions: `ls -l <fileName/DirectoryName>`
-* Find a user’s primary group information: `id <userName>` . If you want a less verbose output that only shows the primary group name: `id -gn <userName>`
-* Find the groups of a user: `groups <userName>`
-* Create a new group: `groupadd <groupName>`
-* Delete a group: `groupdel <groupName>`
-* Switch groups: `newgrp <groupName>`
-* Add a user to group/s: `sudo usermod -a -G <groupName> <userName>` . The -a and -G options ensure that the user is not removed from any group that the user already belongs to.
 * Create a new standard user: `useradd <userName>`. Use the -e flag to set the date when the account expires: `useradd <userName>** -e <YYYY-MM-DD>`.
 * Set a password for a user: `passwd <userName>`
 * Remove a user account: `userdel <userName>`
@@ -101,14 +119,6 @@ When whitelisting individual commands using the above syntax, it is important to
 * View files including hidden and permissions: ls -al
 * Change user: `su - <userName>`
 * Create file: `touch <fileName>`
-* Change the owner of a file: `chown <newOwner> <fileName>`
-* &#x20;Change the group of a file: `chown :<groupName> <file-name>`
-* Change both the owner and the group of a file: `chown <newOwner>:<newGroup> <fileName>`.  Alternatively the userId and groupId can be used instead. `e.g chown 1000:1001 test1`
-* Change ownership on directory: `chown -R <newOwner>:<newGroup> <directory-name-or-path>`
-* Change ownership after checking existing owner and/or group: `chown --from=[curr-own]:[curr-group] [new-owner]:[new-group] [filename]`
-* Change ownership verbose: chown `<newOwner>:<newGroup> <fileName> -v`
-* List all members of a group: `getent group developers`
-* List all groups: `less /etc/group`
 * List all users: `less /etc/passwd`
 
 </details>
