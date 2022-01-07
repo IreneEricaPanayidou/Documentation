@@ -84,7 +84,7 @@ When whitelisting individual commands using the above syntax, it is important to
 * Find a user’s primary group information: `id <userName>` . If you want a less verbose output that only shows the primary group name: `id -gn <userName>`
 * Find the groups of a user: `groups <userName>`
 * Create a new group: `groupadd <groupName>`
-* `Delete a group: groupdel <groupName>`
+* Delete a group: `groupdel <groupName>`
 * Switch groups: `newgrp <groupName>`
 * Add a user to group/s: `sudo usermod -a -G <groupName> <userName>` . The -a and -G options ensure that the user is not removed from any group that the user already belongs to.
 * Create a new standard user: `useradd <userName>`. Use the -e flag to set the date when the account expires: `useradd <userName>** -e <YYYY-MM-DD>`.
