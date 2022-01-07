@@ -135,6 +135,27 @@ When whitelisting individual commands using the above syntax, it is important to
 
 <details>
 
+<summary>Soft links (symlinks)</summary>
+
+A symlink (also called a symbolic link) is a type of file in Linux that points to another file or a folder on your computer. Soft links are similar to shortcuts, and can point to another file or directory in any file system.
+
+Hard links are also shortcuts for files and folders, but a hard link cannot be created for a folder or file in a different file system.
+
+#### Commands:
+
+* Create a sym link for a file: `ln -s {source-filename} {symbolic-filename}.` Same applies for a directory.
+* Create a sym link with force:  `ln -sf <source> <linkName>`
+* Verify a sym link: `ls -l {source-filename} {symbolic-filename}`
+* Overwrite a sym link: `ln -f -s <path-to-file> <file>`
+* Unlink a sym link: `unlink <path-to-symlink>`
+* Remove a sym link: `rm <path-to-symlink>`
+* Find broken links: `find <path/directory> -xtype l`
+* Find and delete broken links: `find <path/directory> -xtype l -delete`
+
+</details>
+
+<details>
+
 <summary><strong>General Commands</strong></summary>
 
 * Create a new standard user: `useradd <userName>`. Use the -e flag to set the date when the account expires: `useradd <userName>** -e <YYYY-MM-DD>`.
@@ -155,5 +176,3 @@ When whitelisting individual commands using the above syntax, it is important to
 * Modify a user: `usermod <flags and options>`
 
 </details>
-
-Create a softlink(symlink) ln -sf \<source> \<linkName>
