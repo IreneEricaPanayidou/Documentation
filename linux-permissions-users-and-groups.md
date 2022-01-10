@@ -37,12 +37,13 @@ So, for example:
 * 666 is the same as rw-rw-rw-
 * 744 is the same as rwxr--r--
 
-![](<.gitbook/assets/image (4).png>)
+![](<.gitbook/assets/image (4) (1).png>)
 
 #### Commands:
 
 * View Permissions: `ls -l <fileName/DirectoryName>`
 * Change permissions: `chmod +/- <permissions> <filename and/or directory>`
+* ``![](<.gitbook/assets/image (5).png>)``
 
 </details>
 
@@ -151,6 +152,20 @@ Hard links are also shortcuts for files and folders, but a hard link cannot be c
 * Remove a sym link: `rm <path-to-symlink>`
 * Find broken links: `find <path/directory> -xtype l`
 * Find and delete broken links: `find <path/directory> -xtype l -delete`
+
+</details>
+
+<details>
+
+<summary>Tar</summary>
+
+Used to archive files or to extract already archived files.
+
+![](<.gitbook/assets/image (4).png>)
+
+#### Commands:
+
+Create tar cvf file.tar \*.c
 
 </details>
 
