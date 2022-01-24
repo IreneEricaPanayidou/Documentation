@@ -43,6 +43,7 @@ So, for example:
 
 * View Permissions: `ls -l <fileName/DirectoryName>`
 * Change permissions: `chmod +/- <permissions> <filename and/or directory>`
+* Change permissions of directory: `chmod -R 755 <directoryName>`
 * ``![](<.gitbook/assets/image (5).png>)``
 
 </details>
