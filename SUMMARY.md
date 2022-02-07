@@ -3,6 +3,6 @@
 * [Documentation](README.md)
 * [Linux](linux-permissions-users-and-groups.md)
 
-## Group 1
+## OpenShift
 
-* [Page 1](group-1/page-1.md)
+* [OpenShift CLI](openshift/openshift-cli.md)
